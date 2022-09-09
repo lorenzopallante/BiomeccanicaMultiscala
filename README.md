@@ -2,11 +2,11 @@
 Official repo of the Biomeccanica Multiscala course (prof. Marco A. Deriu) - Master Degree in Biomedical engineering, Politecnico di Torino, ITALY
 
 ## Instructors
-Marco A. Deriu
-Lorenzo Pallante
-Eric A. Zizzi
-Marcello Miceli
-Marco Cannariato
+- Marco A. Deriu
+- Lorenzo Pallante
+- Eric A. Zizzi
+- Marcello Miceli
+- Marco Cannariato
 
 ## Schedule
 
