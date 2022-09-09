@@ -1,0 +1,2192 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "xQO8E95hdgT8",
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "# Introduction\n",
+    "**Introduction to Notebook, Python and Bash**\n",
+    "\n",
+    "\n",
+    "Authors:\n",
+    "    \n",
+    "- Prof. Marco A. Deriu (marco.deriu@polito.it)\n",
+    "- Lorenzo Pallante (lorenzo.pallante@polito.it)\n",
+    "- Eric A. Zizzi (eric.zizzi@polito.it)\n",
+    "- Marcello Miceli (marcello.miceli@polito.it)\n",
+    "- Marco Cannariato (marco.cannariato@polito.it)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "# Table of Contents\n",
+    "\n",
+    "3. Notebook cells \n",
+    "4. What is Linux? \n",
+    "5. The PDB files\n",
+    "6. Exercises\n",
+    "\n",
+    "**Learning outcomes:** \n",
+    "- learn the basics of colab and jupyter notebooks\n",
+    "- understand what is Linux and its basic commands and scripting codes\n",
+    "- know PDB files and their structure\n",
+    "- Try yourselves with exercises"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "xrj78inLRVNz",
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "# Cells\n",
+    "A notebook is a list of cells. \n",
+    "Cells contain either explanatory text or executable code and its output. \n",
+    "Click a cell to select it."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "HK2VlBuiRVN1",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "## Code cells\n",
+    "Below is a **code cell**. Click in the cell to select it and execute the contents in the following ways:\n",
+    "\n",
+    "* Click the **Play icon** in the left gutter of the cell;\n",
+    "* Type **Cmd/Ctrl+Enter** to run the cell in place;\n",
+    "* Type **Shift+Enter** to run the cell and move focus to the next cell(adding one if none exists); or\n",
+    "* Type **Alt+Enter** to run the cell and insert a new code cell immediately below it.\n",
+    "\n",
+    "There are additional options for running some or all cells in the **Runtime** menu."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "cell_style": "center",
+    "id": "jJmS-BrKRVN4",
+    "outputId": "7ebd3f23-8b5f-447c-cf14-3c334a419f70",
+    "scrolled": true,
+    "slideshow": {
+     "slide_type": "-"
+    }
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "10"
+      ]
+     },
+     "execution_count": 97,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a = 10 # defining variable a\n",
+    "a"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "cell_style": "split",
+    "id": "Oq7RhG6qRVN-",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "By default, code cells are written in **python**, but you can change the interpreter of the cell. \n",
+    "\n",
+    "For example, if you want to write a cell in **bash** language, you can:\n",
+    "- `%%bash`at the beginning of your cell \n",
+    "- write each command preceded by `!`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "cell_style": "split",
+    "id": "zSL2JfdfRVOA",
+    "outputId": "5aff6c51-35f8-4fef-c321-9f7b204ee936",
+    "scrolled": true,
+    "slideshow": {
+     "slide_type": "-"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Ciao Mondo!\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%bash\n",
+    "echo \"Ciao Mondo!\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "cell_style": "split",
+    "id": "_5zQOjKYRVOC",
+    "outputId": "3c891666-78e9-4bfc-d2b8-980666bb853a",
+    "slideshow": {
+     "slide_type": "-"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Ciao Mondo!\r\n"
+     ]
+    }
+   ],
+   "source": [
+    "!echo \"Ciao Mondo!\""
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "Vjc0bdikRVOE",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "## Text cells\n",
+    "This is a **text cell**. You can **double-click** to edit this cell. Text cells\n",
+    "use markdown syntax. To learn more: https://www.markdownguide.org/basic-syntax/.\n",
+    "\n",
+    "You can also add math to text cells using [LaTeX](http://www.latex-project.org/)\n",
+    "to be rendered by [MathJax](https://www.mathjax.org). Just place the statement\n",
+    "within a pair of **\\$** signs. \n",
+    "\n",
+    "For example `$\\sqrt{3x-1}+(1+x)^2$` becomes\n",
+    "$\\sqrt{3x-1}+(1+x)^2.$\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "NxItBGpNRVOG",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "## Adding and moving cells\n",
+    "You can add new cells by using the **+ CODE** and **+ TEXT** buttons that show when you hover between cells. These buttons are also in the toolbar above the notebook where they can be used to add a cell below the currently selected cell.\n",
+    "\n",
+    "You can also create a new cell using the shortcuts **\"A\"** or **\"B\"** to create it above and under the current cell, respectively.\n",
+    "\n",
+    "You can move a cell by selecting it and clicking **Cell Up** or **Cell Down** in the top toolbar. \n",
+    "\n",
+    "Consecutive cells can be selected by \"lasso selection\" by dragging from outside one cell and through the group.  Non-adjacent cells can be selected concurrently by clicking one and then holding down Ctrl while clicking another.  Similarly, using Shift instead of Ctrl will select all intermediate cells."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "kiN3h96FRVOI",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "## Using Notebook to plot data\n",
+    "\n",
+    "Notebooks are powerful tools to rapidly visualise and process data."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {
+    "cell_style": "center",
+    "colab": {
+     "base_uri": "https://localhost:8080/",
+     "height": 281
+    },
+    "executionInfo": {
+     "elapsed": 7,
+     "status": "ok",
+     "timestamp": 1662626674896,
+     "user": {
+      "displayName": "Lorenzo Pallante",
+      "userId": "15223561348967771574"
+     },
+     "user_tz": -120
+    },
+    "id": "5DFh6-TPRVOJ",
+    "outputId": "9884ecf8-af4c-425b-fb78-81c699b4aa98",
+    "slideshow": {
+     "slide_type": "-"
+    }
+   },
+   "outputs": [
+    {
+     "data": {
+      "image/png": "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\n",
+      "text/plain": [
+       "<Figure size 432x288 with 1 Axes>"
+      ]
+     },
+     "metadata": {
+      "needs_background": "light"
+     },
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "import numpy as np\n",
+    "from matplotlib import pyplot as plt\n",
+    "\n",
+    "ys = 200 + np.random.randn(100)\n",
+    "x = [x for x in range(len(ys))]\n",
+    "\n",
+    "plt.plot(x, ys, '-')\n",
+    "plt.fill_between(x, ys, 195, where=(ys > 195), facecolor='g', alpha=0.6)\n",
+    "plt.title(\"Fills and Alpha Example\")\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "56fkK_FCRVOK",
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "# What is Linux?\n",
+    "- An operating system\n",
+    "- Unix was the predecessor of Linux\n",
+    "\n",
+    "***Why using Linux?***\n",
+    "1. Linux is **free**\n",
+    "2. It’s **fully customizable**\n",
+    "3. It’s **stable** (i.e. it almost never crashes)\n",
+    "\n",
+    "*These characteristics make it an ideal OS for programmers and scientists*"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "gA-E6RfDRVOL",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "## Basic Command Structure\n",
+    "\n",
+    "`$ command –x <args> -y <args> …<target>`\n",
+    "\n",
+    "- `command`: Binary/script. Must be in current folder or in $PATH!\n",
+    "- `args`: Specific option, with its argument (e.g. –verbose False)\n",
+    "- `target`: Positional argument, e.g. a target file (if applicable)\n",
+    "\n",
+    "<div class=\"alert alert-block alert-success\"> \n",
+    "    \n",
+    "In general, you can use `command –-help>` or `command –h>` to have an help message for the command used\n",
+    "\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "iYaEdM7sRVOM",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "## The Directory Tree\n",
+    "The **Directory Tree** is the organitazion of folders and files in your computer.\n",
+    "\n",
+    "***Note***: Unless explicitly specified, command will look for files (and create them) in the current directory. Different locations must be specified!"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "paZKvSjaRVOM",
+    "slideshow": {
+     "slide_type": "-"
+    }
+   },
+   "source": [
+    "![title](Figures/01-Picture1.png)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "abf-0IcNRVON",
+    "slideshow": {
+     "slide_type": "-"
+    }
+   },
+   "source": [
+    "To know your current location, you can type the following command: "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/"
+    },
+    "executionInfo": {
+     "elapsed": 236,
+     "status": "ok",
+     "timestamp": 1662626707364,
+     "user": {
+      "displayName": "Lorenzo Pallante",
+      "userId": "15223561348967771574"
+     },
+     "user_tz": -120
+    },
+    "id": "ATOfs5B6RVON",
+    "outputId": "b3686436-aeac-4eb2-e495-0daf2da545ca",
+    "slideshow": {
+     "slide_type": "-"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "/home/lorenzo/google-drive/01-PhD/M3B/01-Didattica/BM/LAB/0-Intro\r\n"
+     ]
+    }
+   ],
+   "source": [
+    "!pwd"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "rj481Y-pRVOO",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "## Basic Linux Commands\n",
+    "\n",
+    "### pwd (Print Working Directory)\n",
+    "Command to get the current location inside the directory tree"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "id": "dxsnGL5oRVOO",
+    "outputId": "0136baf7-e1e5-42f3-afa2-91446a364752",
+    "slideshow": {
+     "slide_type": "-"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "/mnt/g/Il mio Drive/01-PhD/M3B/01-Didattica/BM/LAB/0-Intro\r\n"
+     ]
+    }
+   ],
+   "source": [
+    "!pwd"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "BIGysMqtRVOP",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "### echo \n",
+    "Command to print text\n",
+    "\n",
+    "> `echo [message]`\n",
+    "\n",
+    "***Hint***: If you want to print more than a word you must use \" at the beginning and at the end of your message!\n",
+    "\n",
+    "*Examples:*\n",
+    "- `echo \"ciao\"` print ciao\n",
+    "- `echo \"a\"` print a\n",
+    "- `echo \"$a\" ` print the content of the variable a\n",
+    "- `echo \"$(command)\"` print the output of the command in the parentheses\n",
+    "- `echo \"ciao\">file.txt` create a file named file.txt writing ciao in it\n",
+    "- `echo \"ciao\">>file.txt` append ciao to the file named file.txt"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "id": "V3ItAo44RVOP",
+    "outputId": "14f5f450-06f7-4f16-b734-9129695c6268",
+    "slideshow": {
+     "slide_type": "-"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "10\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%bash\n",
+    "a=10\n",
+    "echo $a"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "g1l7YAYDRVOQ",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "### cd (Change Directory)\n",
+    "\n",
+    "- `cd ..`: return to the previous level\n",
+    "- `cd ../../`: return back of 2 levels\n",
+    "- `cd foldername`: go the the folder named \"foldername\" (***Note: the folder must exist!!***)\n",
+    "- `cd absolute_path_folder`\n",
+    "\n",
+    "<div class=\"alert alert-block alert-warning\"> \n",
+    "\n",
+    "**WARNING**\n",
+    "    \n",
+    "Inside *notebooks*, the `cd` command affects only the present cell. This means that in a new cell your location will be again the notebook location.\n",
+    "    \n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {
+    "colab": {
+     "base_uri": "https://localhost:8080/"
+    },
+    "executionInfo": {
+     "elapsed": 221,
+     "status": "ok",
+     "timestamp": 1662626735293,
+     "user": {
+      "displayName": "Lorenzo Pallante",
+      "userId": "15223561348967771574"
+     },
+     "user_tz": -120
+    },
+    "id": "PrZCnP58RVOQ",
+    "outputId": "e24f41f3-01b6-4f56-fa7c-1641737689ab",
+    "slideshow": {
+     "slide_type": "-"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "/content\n",
+      "/\n",
+      "/\n",
+      "/\n",
+      "/usr/local/bin\n"
+     ]
+    },
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "bash: line 6: cd: BM: No such file or directory\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%bash\n",
+    "pwd\n",
+    "cd .. # return to the previous level\n",
+    "pwd\n",
+    "cd ../../ #return back of 2 levels\n",
+    "pwd\n",
+    "cd BM #enter in the folder named \"LAB\"\n",
+    "pwd\n",
+    "cd /usr/local/bin #go to the absolute location of the \"bin\" folder\n",
+    "pwd"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "2NlcjHVVRVOR",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "### ls (list)\n",
+    "Lists all items (files and folders) in the folder you are in.\n",
+    "> `ls [options] [target]`\n",
+    "\n",
+    "- `ls folder`: List items in the specified folder\n",
+    "- `ls -l`: Show more information about the files and folders listed\n",
+    "- `ls -a`: It also shows the hidden files in the folder\n",
+    "\n",
+    "See the example below:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {
+    "slideshow": {
+     "slide_type": "-"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0-Intro.ipynb\n",
+      "ese01\n",
+      "esercizi_bash\n",
+      "Figures\n",
+      "INSTALL.md\n",
+      "Materials\n",
+      "temp.ipynb\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%bash \n",
+    "ls"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "QSXWF3paRVOR",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "### mkdir (make directory)\n",
+    "Command to create directories\n",
+    "\n",
+    "> `mkdir [target]`\n",
+    "\n",
+    "- `mkdir pippo`: Create a folder named \"pippo\"\n",
+    "- `mkdir -p pippo/pluto`: Recursively create folder tree \"pippo/pluto\"\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {
+    "cell_style": "split",
+    "colab": {
+     "base_uri": "https://localhost:8080/"
+    },
+    "executionInfo": {
+     "elapsed": 246,
+     "status": "ok",
+     "timestamp": 1662626762265,
+     "user": {
+      "displayName": "Lorenzo Pallante",
+      "userId": "15223561348967771574"
+     },
+     "user_tz": -120
+    },
+    "id": "qd7adXHIRVOR",
+    "outputId": "ffaf6282-f075-4bd9-b21f-5543783956e8",
+    "slideshow": {
+     "slide_type": "-"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "sample_data\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%bash\n",
+    "ls"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {
+    "cell_style": "split",
+    "colab": {
+     "base_uri": "https://localhost:8080/"
+    },
+    "executionInfo": {
+     "elapsed": 214,
+     "status": "ok",
+     "timestamp": 1662626765905,
+     "user": {
+      "displayName": "Lorenzo Pallante",
+      "userId": "15223561348967771574"
+     },
+     "user_tz": -120
+    },
+    "id": "y35hqVSRRVOS",
+    "outputId": "d8cb5633-e434-4920-ad61-8f0ab21e6d27",
+    "scrolled": true,
+    "slideshow": {
+     "slide_type": "-"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "exe-0\n",
+      "sample_data\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%bash\n",
+    "mkdir -p exe-0\n",
+    "ls"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "8IKcMvWrRVOS",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "<span style='color:#222D5A; font-size:4em;font-style: bold'> Exercise 0.0  </span>\n",
+    "\n",
+    "- Print the current working directory in the directory tree\n",
+    "- Create a new directory called \"exe-0\" and enter in it\n",
+    "- Check if you made the correct stuff print the new working directory path. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "id": "rzQMLsJgRVOS",
+    "scrolled": true,
+    "slideshow": {
+     "slide_type": "-"
+    },
+    "solution2": "hidden",
+    "solution2_first": true
+   },
+   "outputs": [],
+   "source": [
+    "# try yourself\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "id": "h1jO9vd7RVOS",
+    "solution2": "hidden"
+   },
+   "outputs": [],
+   "source": [
+    "%%bash\n",
+    "echo $(pwd)\n",
+    "mkdir -p exe-0\n",
+    "cd exe-0\n",
+    "echo $(pwd)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "fjcOUAlZRVOT",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "<div class=\"alert alert-info\"> AtomGroups **and built-in functions** \n",
+    "\n",
+    "MDAnalysis `AtomGroups` have a convenient `center_of_mass()` method to get their center of mass at the current frame. \n",
+    "Other  methods for common calculations based on positions include `center_of_geometry()`, `radius_of_gyration()` and `principal_axes()`. \n",
+    "\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "J1DPZb8dRVOT"
+   },
+   "source": [
+    "<div class=\"alert alert-block alert-success\"> Use green boxes sparingly, and only for some specific purpose that the other boxes can't cover. For example, if you have a lot of related content to link to, maybe you decide to use green boxes for related links from each section of a notebook. </div>\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "S2ZowFpARVOT"
+   },
+   "source": [
+    "<div class=\"alert alert-block alert-danger\"> In general, just avoid the red boxes. </div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "-JPyl2grRVOT"
+   },
+   "source": [
+    "<div class=\"alert alert-block alert-warning\"> Use yellow boxes for examples that are not inside code cells, or use for mathematical formulas if needed. </div>"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "5nBjBEZqRVOT",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "### touch\n",
+    "Command to create files\n",
+    "\n",
+    "> `touch [target]`\n",
+    "\n",
+    "- `touch file.txt`: create an empty file named file.txt\n",
+    "- `touch exe-0/file.txt`: create an empty file named file.txt in the ese-0 folder"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "cell_style": "split",
+    "id": "ix4KF1m-RVOU"
+   },
+   "outputs": [],
+   "source": [
+    "%%bash\n",
+    "ls\n",
+    "touch file.txt"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "cell_style": "split",
+    "id": "GqlzjH7cRVOU"
+   },
+   "outputs": [],
+   "source": [
+    "%%bash \n",
+    "ls"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "HPn6P-ylRVOU",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "### mv (move)\n",
+    "Command to rename or move files and folders\n",
+    "\n",
+    "> `mv [source][destination]`\n",
+    "\n",
+    "- `mv file.txt file1.txt `: rename file.txt to file1.txt\n",
+    "- `mv exe-0 exe-00 `: rename folder exe-0 in exe-00\n",
+    "- `mv file1.txt exe-00 `: move file1.txt into folder exe-00\n",
+    "\n",
+    "<div class=\"alert alert-block alert-warning\"> \n",
+    "\n",
+    "**WARNING**\n",
+    "    \n",
+    "If **[destination]** already extist in the target path the command `mv` will **overwrite** the file without asking.\n",
+    "\n",
+    "</div>"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "id": "6E8KPP-sRVOU"
+   },
+   "outputs": [],
+   "source": [
+    "%%bash \n",
+    "mv file.txt file1.txt\n",
+    "ls"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "_LIads2pRVOV",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "### cp (copy)\n",
+    "Command to copy files and folders\n",
+    "\n",
+    "> `cp [source][destination]`\n",
+    "\n",
+    "- `cp file.txt file1.txt `: copy file.txt to file1.txt\n",
+    "- `cp -r exe-0 exe-00 `: copy folder exe-0 in exe-00\n",
+    "- `cp file.txt exe-00/ `: copy file file.txt into folder exe-00"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "id": "ePc2Fy5zRVOV"
+   },
+   "outputs": [],
+   "source": [
+    "%%bash\n",
+    "cp file1.txt exe-0/\n",
+    "ls exe-0/"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "2NX_q5HvRVOV",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "### rm (remove)\n",
+    "Command to remove files and folders\n",
+    "\n",
+    "> `rm [target]`\n",
+    "\n",
+    "- `rm file.txt`: remove file named file.txt\n",
+    "- `rm -r foldername`: remove folder named foldername"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "id": "kuOvD8Z0RVOV"
+   },
+   "outputs": [],
+   "source": [
+    "%%bash\n",
+    "rm file.txt\n",
+    "ls"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "b5rIhIcyRVOW",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "### cat \n",
+    "Print the content of a file\n",
+    "\n",
+    "> `cat [target]`\n",
+    "\n",
+    "- `cat file.txt`: print the content of file.txt"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "id": "9v3JbK_oRVOW"
+   },
+   "outputs": [],
+   "source": [
+    "%%bash\n",
+    "cat file1.txt"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "cell_style": "split",
+    "id": "KZks3UTkRVOW",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "### head \n",
+    "Print the beginning of a file\n",
+    "\n",
+    "> `head [target]`\n",
+    "\n",
+    "- `head file.txt`: print the beginning of file.txt\n",
+    "- `head -n 20 file.txt`: print the first 20 lines of file.txt"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "cell_style": "split",
+    "id": "OvlqBTgoRVOW"
+   },
+   "source": [
+    "### tail\n",
+    "Print the end of a file\n",
+    "\n",
+    "> `tail [target]`\n",
+    "\n",
+    "- `tail file.txt`: print the end of file.txt\n",
+    "- `tail -n 20 file.txt`: print the last 20 lines of file.txt"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "cell_style": "split",
+    "id": "HS9qcscCRVOW"
+   },
+   "outputs": [],
+   "source": [
+    "%%bash\n",
+    "echo -e \"1\\n2\\n3\\n4\" >temp.txt # create file with one number per row\n",
+    "head -n 3 temp.txt # print first 3 lines of file temp\n",
+    "rm temp.txt"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "cell_style": "split",
+    "id": "KagkJuHURVOX"
+   },
+   "outputs": [],
+   "source": [
+    "%%bash\n",
+    "echo -e \"1\\n2\\n3\\n4\" >temp.txt # create file with one number per raw\n",
+    "tail -n 2 temp.txt # print last 2 lines of file temp\n",
+    "rm temp.txt"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "cell_style": "center",
+    "id": "DUgUVhmMRVOX",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "### grep\n",
+    "Command to isolate rows containing a specific pattern (word, number, character, etc...)\n",
+    "\n",
+    "> `grep \"PATTERN\" [target]`\n",
+    "\n",
+    "- `head 3 file.txt`: isolate lines of file.txt with the number 3 \n",
+    "- `head \"ciao mondo\" file.txt`: isolate lines of file.txt with the number pattern \"ciao mondo\""
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "id": "HsRh0vIhRVOX"
+   },
+   "outputs": [],
+   "source": [
+    "%%bash\n",
+    "echo -e \"1\\n2\\n3\\n4\" >temp.txt # create file with one number per row\n",
+    "grep 3 temp.txt # print first row(s) with 3 \n",
+    "rm temp.txt"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "3C4RshgvRVOX",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "### uniq\n",
+    "Finds repeated lines and keeps only one copy\n",
+    "\n",
+    "> `uniq [target]`\n",
+    "\n",
+    "- `uniq file.txt` keeps only uniq rows in file.txt"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "id": "5k9XxImvRVOX"
+   },
+   "outputs": [],
+   "source": [
+    "%%bash\n",
+    "echo -e \"1\\n2\\n2\\n2\\n2\\n2\\n2\\n2\\n2\\n2\\n2\\n2\\n2\" >temp.txt # create file with duplicated rows\n",
+    "uniq temp.txt \n",
+    "rm temp.txt"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "8GieVeCwRVOY",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "### sort\n",
+    "Sorts the rows of a file in numerical and then alphabetical order. Numeric has priority over alphabetical\n",
+    "\n",
+    "> `sort [target]`\n",
+    "\n",
+    "- `sort file.txt` sort rows in file.txt"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "id": "Rk1gwWjuRVOY"
+   },
+   "outputs": [],
+   "source": [
+    "%%bash\n",
+    "echo -e \"4\\n3\\n2\\n1\" >temp.txt # create file with descending order in line number\n",
+    "sort temp.txt\n",
+    "rm temp.txt"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "0xmjUomKRVOY",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "### cut\n",
+    "Print specific parts of each line of a file (columns or characters).\n",
+    "\n",
+    "> `cut [OPTIONS] [target]`\n",
+    "\n",
+    "- `cut -c 1-5 file.txt` print characters in positions 1 to 5"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "id": "IKw_4wbQRVOY"
+   },
+   "outputs": [],
+   "source": [
+    "%%bash\n",
+    "echo -e \"ciao mondo\\ncome va?\\n123456789\" >temp.txt # create file with descending order in line number\n",
+    "cut -c 1-5 temp.txt\n",
+    "rm temp.txt"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "WHvur6ZYRVOY",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "### wc\n",
+    "Count the words, rows, or elements indicated by the options.\n",
+    "\n",
+    "> `wc [OPTIONS] [target]`\n",
+    "\n",
+    "- `wc -l file.txt` count number of lines in the file file.txt\n",
+    "- `wc -w file.txt` count number of words in the file file.txt\n",
+    "- `wc -m file.txt` count number of characters in the file file.txt\n",
+    "- `wc -c file.txt` count number of bytes in the file file.txt"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "id": "W4gHeZ8fRVOZ"
+   },
+   "outputs": [],
+   "source": [
+    "%%bash\n",
+    "echo -e \"ciao mondo\\ncome va?\\n123456789\" >temp.txt # create file with descending order in line number\n",
+    "wc -l temp.txt #lines\n",
+    "wc -w temp.txt #words\n",
+    "wc -m temp.txt #characters\n",
+    "wc -c temp.txt #bytes\n",
+    "rm temp.txt"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "yij2hlZARVOZ",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "<span style='color:#222D5A; font-size:4em;font-style: bold'> Exercise 0.1</span>\n",
+    "\n",
+    "Create a folder called “ese01” and move into it. Print the folder path and save it in a variable called pathx. Print the variable on your screen.\n",
+    "\n",
+    "**Hints**: mkdir, cd, pwd, echo"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "id": "roO5iul1RVOZ",
+    "scrolled": true,
+    "solution2": "shown",
+    "solution2_first": true
+   },
+   "outputs": [],
+   "source": [
+    "# try yourself\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "code_folding": [],
+    "id": "ud4WAGJTRVOZ",
+    "outputId": "f0da06fc-02c0-48a0-fa62-c63dc7dd9889",
+    "solution2": "shown"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "/mnt/g/Il mio Drive/01-PhD/M3B/01-Didattica/BM/LAB/0-Intro/ese01\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%bash\n",
+    "mkdir ese01\n",
+    "cd ese01\n",
+    "pathx=$(pwd)\n",
+    "echo $pathx"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "VOhRcJFMRVOZ",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "<span style='color:#222D5A; font-size:4em;font-style: bold'> Exercise 0.2  </span>\n",
+    "\n",
+    "Create a file called file01.txt inside the ese01 folder previously created; write the pathx variable containing th current path into it; finally, print the file to the terminal\n",
+    "\n",
+    "**Hints**: touch, pwd, cat"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "id": "lhUZyYNDRVOa",
+    "scrolled": true,
+    "solution2": "shown",
+    "solution2_first": true
+   },
+   "outputs": [],
+   "source": [
+    "# try yourself\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "code_folding": [],
+    "id": "VWxbZn4XRVOa",
+    "outputId": "d2c38c86-80cd-45b9-87e6-103d2b003918",
+    "solution2": "shown"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "/mnt/g/Il mio Drive/01-PhD/M3B/01-Didattica/BM/LAB/0-Intro/ese01\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%bash\n",
+    "cd  ese01/\n",
+    "touch file01.txt\n",
+    "pathx=$(pwd)\n",
+    "echo $pathx >file01.txt\n",
+    "cat file01.txt"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "NQJpYzvmRVOa",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "### awk\n",
+    "awk is a command that integrates a complex and complete programming language.. we will see just a few functionalities\n",
+    "\n",
+    "AWK can be defined as a generic filter for text files.\n",
+    "It processes one line at a time of the text file, performing different actions depending on whether the line meets certain conditions or contains certain patterns. It then reads line by line and applies the rules defined by the programmer to each.\n",
+    "* Everything that is to be read in the specific language of AWK must be inserted between ' '\n",
+    "\n",
+    "* Actions in awk are enclosed in curly brackets { }\n",
+    "* Multiple instructions are executed in the order they appear and must be separated by ;\n",
+    "\n",
+    "* The pattern consists of the expression enclosed between / /\n",
+    "\n",
+    "\n",
+    "> `awk '{awk code}' [target]`"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "uqH5cXOJRVOa",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "**Examples using awk:** "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "id": "Mn4YswDpRVOb"
+   },
+   "outputs": [],
+   "source": [
+    "# loading example file text\n",
+    "!cp Materials/elenco.txt .\n",
+    "!cp Materials/numbers.txt . "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "cell_style": "split",
+    "id": "rfrooeCrRVOb",
+    "outputId": "25ff22a3-e4bc-4cb3-ecaf-6af3d7552c05",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Mario guarda il mare\r",
+      "\r\n",
+      "Ho preso un gelato con Mario\r",
+      "\r\n",
+      "Non litagare con Mario\r",
+      "\r\n",
+      "1 2 3 4 5 6 7 8 9\r",
+      "\r\n",
+      "ciao"
+     ]
+    }
+   ],
+   "source": [
+    "!cat elenco.txt"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "cell_style": "split",
+    "id": "IyoCBiHURVOb",
+    "outputId": "d9a86d7b-2d4d-40e7-ecbb-2a4445f8821a"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Third Column:\n",
+      "il\n",
+      "un\n",
+      "con\n",
+      "3\n",
+      "\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%bash\n",
+    "echo -e \"\\nThird Column:\"\n",
+    "cat elenco.txt | awk '{print $3}' #print the 3rd column"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "cell_style": "split",
+    "id": "u0Imf_EWRVOb",
+    "outputId": "969a5da4-bc09-4146-a6a3-d518a0af40ce",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Mario guarda il mare\r\n",
+      "Ho preso un gelato con Mario\r\n",
+      "Non litagare con Mario\r\n",
+      "1 2 3 4 5 6 7 8 9\r\n",
+      "ciao\r\n"
+     ]
+    }
+   ],
+   "source": [
+    "!cat elenco.txt"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "cell_style": "split",
+    "id": "ksQ-tbJ6RVOb",
+    "outputId": "c7a3d13b-ef3c-4f1a-ba84-8c4412f3fce1"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Number of fields per row:\n",
+      "4\n",
+      "6\n",
+      "4\n",
+      "9\n",
+      "1\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%bash\n",
+    "echo -e \"\\nNumber of fields per row:\"\n",
+    "cat elenco.txt | awk '{print NF}' #print the number of  filed"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "cell_style": "split",
+    "id": "7GWsNmUmRVOc",
+    "outputId": "c02aeb7d-fbc0-40c2-d6ad-b66b14f6c018",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Mario guarda il mare\r\n",
+      "Ho preso un gelato con Mario\r\n",
+      "Non litagare con Mario\r\n",
+      "1 2 3 4 5 6 7 8 9\r\n",
+      "ciao\r\n"
+     ]
+    }
+   ],
+   "source": [
+    "!cat elenco.txt"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "cell_style": "split",
+    "id": "7AcyX6hrRVOc",
+    "outputId": "c7465ad2-5115-4d58-985d-6d8120847bac"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Number of row\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "5\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%bash\n",
+    "echo -e \"\\nNumber of row\"\n",
+    "cat elenco.txt | awk '{print NR}' #print the number of  processed row"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "cell_style": "split",
+    "id": "1tRryNLvRVOc",
+    "outputId": "6c85ae3f-cd77-499c-8b6d-11dbb7fb58eb",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Mario guarda il mare\r\n",
+      "Ho preso un gelato con Mario\r\n",
+      "Non litagare con Mario\r\n",
+      "1 2 3 4 5 6 7 8 9\r\n",
+      "ciao\r\n"
+     ]
+    }
+   ],
+   "source": [
+    "!cat elenco.txt"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "cell_style": "split",
+    "id": "z2jeIqrpRVOc",
+    "outputId": "d8b4b785-a3c5-42ae-b524-9e28184d8a14"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Third column = 2: \n",
+      "Mario guarda 2 mare\n",
+      "Ho preso 2 gelato con Mario\n",
+      "Non litagare 2 Mario\n",
+      "1 2 2 4 5 6 7 8 9\n",
+      "ciao  2\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%bash\n",
+    "echo -e \"\\nThird column = 2: \"\n",
+    "awk '{$3=2}{print}' elenco.txt"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "cell_style": "split",
+    "id": "eiFVSdfbRVOc",
+    "outputId": "7031ce5a-9b86-4058-d92d-44e969694b43",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1  2  3   4  5\r",
+      "\r\n",
+      "10 20 30  40 50\r",
+      "\r\n",
+      "40 54 123 12 1\r",
+      "\r\n",
+      "79 85 392 1  3\r",
+      "\r\n"
+     ]
+    }
+   ],
+   "source": [
+    "!cat numbers.txt"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "cell_style": "split",
+    "code_folding": [],
+    "id": "6YTA9KbTRVOd",
+    "outputId": "09b4f585-59dd-4591-b3b4-a51dd93fbe81"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "Find maximum of 4th column:\n",
+      "40\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%bash\n",
+    "echo -e \"\\nFind maximum of 4th column:\"\n",
+    "awk -v max=0 '{ if ($4>max) {max=$4} } END { print max }' numbers.txt"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "cell_style": "split",
+    "id": "pRbx2rKyRVOd",
+    "outputId": "b6cbb04e-4fd2-4031-c96d-88262857ba67",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1  2  3   4  5\r",
+      "\r\n",
+      "10 20 30  40 50\r",
+      "\r\n",
+      "40 54 123 12 1\r",
+      "\r\n",
+      "79 85 392 1  3\r",
+      "\r\n"
+     ]
+    }
+   ],
+   "source": [
+    "!cat numbers.txt"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "cell_style": "split",
+    "id": "11h0_uuTRVOd",
+    "outputId": "bc1ca973-7da2-4f27-cdeb-aa0502858eb6"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "\n",
+      "sum values of the third column:\n",
+      "548\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%bash\n",
+    "echo -e \"\\nsum values of the third column:\"\n",
+    "awk '{ sum += $3 } END { printf \"%d\\n\", sum}' numbers.txt"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "kyY7Ai8dRVOd",
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "# The PDB files"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "bR9_4KhcRVOd",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "## What is a pdb file\n",
+    "\n",
+    "The **Protein Data Bank (pdb)** file format is a textual file format describing the *three-dimensional structures* of molecules held in the [Protein Data Bank](https://www.rcsb.org/)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "NH4sZCVpRVOd"
+   },
+   "source": [
+    "![title](Figures/pdb.png)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "H_fSOd6ORVOd"
+   },
+   "source": [
+    "<div class=\"alert alert-block alert-success\"> \n",
+    "    \n",
+    "To have further information please visit: https://cupnet.net/pdb-format/\n",
+    "\n",
+    "</div>\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "sWpD2S9eRVOe",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "![pdb2vmd](Figures/pdb2vmd.png)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "zQE0BZVXRVOe",
+    "slideshow": {
+     "slide_type": "slide"
+    }
+   },
+   "source": [
+    "# Exercises"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "ea_zJS97RVOe",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "<span style='color:#222D5A; font-size:4em;font-style: bold'> Exercise 0.3\n",
+    "</span>\n",
+    "\n",
+    "Copy the 1yzb.pdb file into the ese01 folder you just created. Print the first 50 lines into a file named first50.pdb. Check that this succeeded by counting the lines of first50.pdb.\n",
+    "\n",
+    "**Hints**: cp, cat, head, wc!"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "id": "mX58w_PFRVOe",
+    "solution2": "shown",
+    "solution2_first": true
+   },
+   "outputs": [],
+   "source": [
+    "# try yourself"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "id": "0I0P0felRVOe",
+    "outputId": "08947539-04b8-44fb-be77-370514a66868",
+    "scrolled": true,
+    "solution2": "shown"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "50\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%bash\n",
+    "# solution\n",
+    "cd ese01\n",
+    "cp ../Materials/1yzb.pdb .\n",
+    "head -n 50 1yzb.pdb >first50.pdb\n",
+    "cat first50.pdb | wc -l "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "sY2AmADJRVOe",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "<span style='color:#222D5A; font-size:4em;font-style: bold'> Exercise 0.4 (intermediate)  </span>\n",
+    "\n",
+    "- Extract only the ATOM lines from 1yzb.pdb and save them to a file named atoms.pdb;\n",
+    "- Extract only the first 10 ATOM lines of 1yzb.pdb, and only the last 10 ATOMS of 1yzb.pdb: save these into first10.pdb and last10.pdb files respectively;\n",
+    "- Extract only ATOM lines from 10 to 20 from 1yzb.pdb file and put into a file named 10_20.pdb\n",
+    "\n",
+    "**Hints**: grep, head, tail!"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "id": "RRhUcFfvRVOf",
+    "scrolled": true,
+    "solution2": "shown",
+    "solution2_first": true
+   },
+   "outputs": [],
+   "source": [
+    "# try yourself\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "code_folding": [],
+    "id": "iM8C_rJWRVOf",
+    "solution2": "shown"
+   },
+   "outputs": [],
+   "source": [
+    "%%bash\n",
+    "#solution\n",
+    "cd ese01/\n",
+    "cat 1yzb.pdb | grep ATOM >atoms.pdb\n",
+    "head -n 10 atoms.pdb >first10.pdb\n",
+    "tail -n 10 atoms.pdb >last10.pdb\n",
+    "head -n 20 atoms.pdb | tail -n 10 >10_20.pdb"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "wWz_dSZsRVOf",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "<span style='color:#222D5A; font-size:4em;font-style: bold'> Exercise 0.5 (intermediate)  </span>\n",
+    "\n",
+    "- Create a new file named extracted.pdb consisting of ATOMs 1-10, 100-110 and the last 10 ATOMS from 1yzb.pdb \n",
+    "- Extract only ATOMS with x lower than 1.5, and save them into x_below.pdb\n",
+    "- Extract only x y z coordinates and atom numbers from ATOMS in the 1yzb.pdb file; save this data to simple.pdb\n",
+    "\n",
+    "**Hints**: cat, grep, head, tail, cut, awk!"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "id": "UEXRsD04RVOf",
+    "scrolled": true,
+    "solution2": "shown",
+    "solution2_first": true
+   },
+   "outputs": [],
+   "source": [
+    "# try yourself\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "code_folding": [],
+    "id": "t3tf2RE6RVOf",
+    "solution2": "shown"
+   },
+   "outputs": [],
+   "source": [
+    "%%bash\n",
+    "#solution\n",
+    "cd ese01/\n",
+    "cat 1yzb.pdb | grep ATOM >atoms.pdb\n",
+    "head -n 10 atoms.pdb >extracted.pdb\n",
+    "tail -n +100 atoms.pdb | head -n 11 >>extracted.pdb\n",
+    "tail -n 10 atoms.pdb >>extracted.pdb\n",
+    "# column 7 contains the x coordinates of the molecular structure\n",
+    "awk '$7<1.5 {print $0}' atoms.pdb >x_below.pdb\n",
+    "# column 2 contains the atom number\n",
+    "# column 7,8,9 contains the x,y,z coordinates respectively\n",
+    "awk '{print $2, $7, $8, $9}' atoms.pdb >simple.pdb"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "w8_iysU1RVOf",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "<span style='color:#222D5A; font-size:4em;font-style: bold'> Exercise 0.6 (advanced)  </span>\n",
+    "\n",
+    "- Count how many ALA residues are contained in 1yzb.pdb. Save into a variable and print the variable\n",
+    "- Count how many trajectory steps are in 1yzb file (every step is separated by the word MODEL). Save it into a variable and print the variable\n",
+    "- Write a file sequence.txt with a number sequence from 1 to 1000\n",
+    "\n",
+    "**Hints**: cat, grep, wc, uniq, sort, seq"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "id": "UwBEadoIRVOf",
+    "scrolled": true,
+    "solution2": "shown",
+    "solution2_first": true
+   },
+   "outputs": [],
+   "source": [
+    "# try yourself\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "code_folding": [],
+    "id": "7lFMhJe-RVOg",
+    "outputId": "b628b131-e0b5-46d5-a8c1-4fd632b55571",
+    "solution2": "shown"
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The pdb collects 70 ALA residues\n",
+      "The pdb has 10 frames\n"
+     ]
+    }
+   ],
+   "source": [
+    "%%bash\n",
+    "#solution\n",
+    "cd ese01/\n",
+    "num_ala=$(grep ALA atoms.pdb | grep CA | wc -l)\n",
+    "echo \"The pdb collects $num_ala ALA residues\"\n",
+    "nframes=$(grep -v REMARK 1yzb.pdb | grep MODEL | wc -l)\n",
+    "echo \"The pdb has $nframes frames\"\n",
+    "seq 1 1000 >sequence.txt"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "NkZ9FMaNRVOg",
+    "slideshow": {
+     "slide_type": "subslide"
+    }
+   },
+   "source": [
+    "<span style='color:#222D5A; font-size:4em;font-style: bold'> Exercise 0.5  </span>\n",
+    "\n",
+    "\n",
+    "**Hints**: touch, echo"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "id": "84d0Z4p6RVOg",
+    "scrolled": true,
+    "solution2": "shown",
+    "solution2_first": true
+   },
+   "outputs": [],
+   "source": [
+    "# try yourself\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "code_folding": [],
+    "id": "eRiqC8o1RVOg",
+    "solution2": "shown"
+   },
+   "outputs": [],
+   "source": [
+    "%%bash\n",
+    "#solution"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "tqqBUL7-RVOg"
+   },
+   "source": [
+    "<span style='color:#222D5A; font-size:4em;font-style: bold'> Exercise 0.5  </span>\n",
+    "\n",
+    "\n",
+    "**Hints**: touch, echo"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "id": "QTpwp9j4RVOg",
+    "scrolled": true,
+    "solution2": "shown",
+    "solution2_first": true
+   },
+   "outputs": [],
+   "source": [
+    "# try yourself\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "code_folding": [],
+    "id": "l-slG9_vRVOg",
+    "solution2": "shown"
+   },
+   "outputs": [],
+   "source": [
+    "%%bash\n",
+    "#solution"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "yQdRqCPBRVOh"
+   },
+   "source": [
+    "<span style='color:#222D5A; font-size:4em;font-style: bold'> Exercise 0.5  </span>\n",
+    "\n",
+    "\n",
+    "**Hints**: touch, echo"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "id": "RnfjJmghRVOh",
+    "scrolled": true,
+    "solution2": "shown",
+    "solution2_first": true
+   },
+   "outputs": [],
+   "source": [
+    "# try yourself\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {
+    "code_folding": [],
+    "id": "kaYV-ZFDRVOh",
+    "solution2": "shown"
+   },
+   "outputs": [],
+   "source": [
+    "%%bash\n",
+    "#solution"
+   ]
+  }
+ ],
+ "metadata": {
+  "celltoolbar": "Slideshow",
+  "colab": {
+   "provenance": []
+  },
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.13"
+  },
+  "toc": {
+   "base_numbering": 1,
+   "nav_menu": {},
+   "number_sections": true,
+   "sideBar": true,
+   "skip_h1_title": false,
+   "title_cell": "Table of Contents",
+   "title_sidebar": "Contents",
+   "toc_cell": false,
+   "toc_position": {
+    "height": "calc(100% - 180px)",
+    "left": "10px",
+    "top": "150px",
+    "width": "384px"
+   },
+   "toc_section_display": true,
+   "toc_window_display": false
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 1
+}

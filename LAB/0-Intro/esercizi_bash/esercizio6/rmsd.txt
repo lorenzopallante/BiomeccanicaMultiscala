@@ -1,0 +1,10 @@
+ rmsd 1 step: 0.0598053
+ rmsd 2 step: 0.806818
+ rmsd 3 step: 2.0789
+ rmsd 4 step: 0.201334
+ rmsd 5 step: 2.96293
+ rmsd 6 step: 1.86764
+ rmsd 7 step: 0.756787
+ rmsd 8 step: 1.05962
+ rmsd 9 step: 0.301836
+ rmsd 10 step: 2.22157
