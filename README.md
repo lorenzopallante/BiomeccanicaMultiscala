@@ -14,7 +14,7 @@ Official repo of the Biomeccanica Multiscala course (prof. Marco A. Deriu)
 
 ## Schedule
 
-|  Day   	        | Title  | Argument                | Materials |
+|  Day   	        | Title  | Topic                   | Materials |
 |---------------	|--------|-------------------------|-----------|
 | 30/09/2022     	| LAB 1  | Intro Colab&Python          	|   [![Intro Colab&Python](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/01-Intro_PythonColab/01-Intro_ColabPython.ipynb)	|
 | 07/10/2022     	| LAB 2  | Exercises on probability  |   [![Probability](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/02-Probability/02-Probability_4students.ipynb)|
