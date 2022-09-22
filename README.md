@@ -3,7 +3,9 @@ Official repo of the Biomeccanica Multiscala course (prof. Marco A. Deriu)
 
 *Master Degree in Biomedical engineering, Politecnico di Torino, ITALY*
 
-[![M3BVirtuous button][M3B_image]][M3B link]{:height="36px" width="36px"}.
+[![M3BVirtuous button][M3B_image]][M3B link]
+
+![](https://m3b.it/wp-content/uploads/2022/09/LOGO_V-color.svg){:height="36px" width="36px"}.
 
 [M3B_image]: https://m3b.it/wp-content/uploads/2022/09/LOGO_V-color.svg 
 [M3B link]: https://m3b.it/
