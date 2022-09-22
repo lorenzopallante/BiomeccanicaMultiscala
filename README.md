@@ -26,6 +26,3 @@ Official repo of the Biomeccanica Multiscala course (prof. Marco A. Deriu)
 | 16/12/2022     	| GROMACS 5          	|   	|
 | 13/01/2022     	| GROMACS 6          	|   	|
 
-[![Intro Colab&Python](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/0-Intro/0-Intro.ipynb)
-
-
