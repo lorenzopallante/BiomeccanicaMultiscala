@@ -26,6 +26,7 @@ Official repo of the Biomeccanica Multiscala course (prof. Marco A. Deriu)
 | 16/12/2022     	| GROMACS 5          	|   	|
 | 13/01/2022     	| GROMACS 6          	|   	|
 
-[![MDA Part 1](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github.com/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/0-Intro/0-Intro.ipynb)
+[![Intro Colab&Python](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/0-Intro/0-Intro.ipynb)
 
 | Future   	| MDAnalysis            	|  [![MDA Part 1](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MDAnalysis/WorkshopMDMLEdinburgh2022/blob/main/MD/MD_01_System_Manipulation.ipynb)  	|
+
