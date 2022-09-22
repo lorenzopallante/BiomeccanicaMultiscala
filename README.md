@@ -5,7 +5,7 @@ Official repo of the Biomeccanica Multiscala course (prof. Marco A. Deriu)
 
 [![M3BVirtuous button][M3B_image]][M3B link]
 
-[M3B_image]: https://m3b.it/wp-content/uploads/2022/09/LOGO_V-color.svg
+[M3B_image]: https://m3b.it/wp-content/uploads/2022/09/LOGO_V-color.svg = 250x
 [M3B link]: https://m3b.it/
 
 ## Instructors
