@@ -17,7 +17,7 @@ Official repo of the Biomeccanica Multiscala course (prof. Marco A. Deriu)
 |  Day   	        | Title  | Topic                   | Materials |
 |---------------	|--------|-------------------------|-----------|
 | -             	| LAB 0  | System Setup           	|   [![SystemSetup](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/00-SystemSetup/00-SystemSetup.ipynb)	|
-| 30/09/2022     	| LAB 1  | Intro Colab&Python          	|   [![Intro Colab&Python](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/01-Intro_PythonColab/01-Intro_ColabPython.ipynb)	|
+| 30/09/2022     	| LAB 1  | Intro Colab&Python          	|   [![Intro Colab&Python](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/01-Intro_ColabPython/01-Intro_ColabPython.ipynb)	|
 | 07/10/2022     	| LAB 2  | Exercises on probability  |   [![Probability](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/02-Probability/02-Probability_4students.ipynb)|
 | 14/10/2022     	| LAB 3  | Intro Linux&Bash       	|   	[![Probability](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/03-Intro_BashLinux/03-Intro_LinuxBash.ipynb)|
 | 21/10/2022     	| LAB 4  | Bash Scripting          	|   	|
