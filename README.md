@@ -2,6 +2,7 @@
 
 # Biomeccanica Multiscala
 Official repo of the Biomeccanica Multiscala course 
+
 Prof. **Marco A. Deriu**
 
 *Master's Degree in Biomedical engineering, Politecnico di Torino, ITALY*
