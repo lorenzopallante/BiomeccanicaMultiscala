@@ -1,7 +1,8 @@
 [<img src="https://m3b.it/wp-content/uploads/2022/09/LOGO_V-color.svg"  width=10% height=10%>](https://m3b.it/)     [<img src="https://www.polito.it/images/logo_poli_blu.png"  width=18% height=18%>](https://didattica.polito.it/pls/portal30/gap.pkg_guide.viewGap?p_cod_ins=01UQUMV&p_a_acc=2023&p_header=S&p_lang=IT&multi=N)
 
-# BiomeccanicaMultiscala
-Official repo of the Biomeccanica Multiscala course (prof. Marco A. Deriu)
+# Biomeccanica Multiscala
+Official repo of the Biomeccanica Multiscala course 
+Prof. **Marco A. Deriu**
 
 *Master's Degree in Biomedical engineering, Politecnico di Torino, ITALY*
 
