@@ -56,6 +56,12 @@ Install RISE for slideshow:
 conda install -c conda-forge rise
 ```
 
+### 3. Install Additional Required Libraries
+
+```bash
+conda install matplotlib numpy seaborn
+```
+
 
 [1]: https://jupyter-notebook.readthedocs.io/en/stable/
 [2]: https://docs.anaconda.com/anaconda/install/
