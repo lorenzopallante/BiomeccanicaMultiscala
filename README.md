@@ -19,11 +19,11 @@ Prof. **Marco A. Deriu**
 |  Day   	        | Title  | Topic                   | Materials |
 |---------------	|--------|-------------------------|-----------|
 | -             	| LAB 0  | System Setup           	|   [![SystemSetup](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/00-SystemSetup/00-SystemSetup.ipynb)	|
-| 30/09/2022     	| LAB 1  | Intro Colab&Python          	|   [![Intro Colab&Python](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/01-Intro_ColabPython/01-Intro_ColabPython.ipynb)	|
+| 30/09/2022     	| LAB 1  | Intro Colab&Python          	|   [![Python](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/01-Intro_ColabPython/01-Intro_ColabPython.ipynb)	|
 | 07/10/2022     	| LAB 2  | Exercises on probability  |   [![Probability](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/02-Probability/02-Probability_Combinatorics.ipynb)|
-| 14/10/2022     	| LAB 3  | Intro Linux&Bash       	|   	[![Probability](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/03-Intro_BashLinux/03-Intro_LinuxBash.ipynb)|
-| 21/10/2022     	| LAB 4  | Bash Scripting          	|   	[![Probability](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/04-BashScripting/04-BashScripting.ipynb)|
-| 28/10/2022     	| LAB 5  | Visualisation Tools          	|   	|
+| 14/10/2022     	| LAB 3  | Intro Linux&Bash       	|   	[![LinuxBash](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/03-Intro_BashLinux/03-Intro_LinuxBash.ipynb)|
+| 21/10/2022     	| LAB 4  | Bash Scripting          	|   	[![BashScripting](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/04-BashScripting/04-BashScripting.ipynb)|
+| 28/10/2022     	| LAB 5  | Visualisation Tools          	|   	[![Visualization](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/05-VisualizationAnalysis/05-VisualizationAnalysis.ipynb)|
 | 04/11/2022     	| LAB 6  | GROMACS 1          	|   	|
 | 11/11/2022     	| LAB 7  | GROMACS 2          	|   	|
 | 18/11/2022     	| LAB 8  | GROMACS 3         	|   	|
