@@ -43,7 +43,7 @@ do
     then
         max=$natoms
         maxname=$file
-        echo "$name has the highest number of residues ($max)" > $cwd/maxres.stat
+        echo "$maxname has the highest number of residues ($max)" > $cwd/maxres.stat
     fi
 done
 
