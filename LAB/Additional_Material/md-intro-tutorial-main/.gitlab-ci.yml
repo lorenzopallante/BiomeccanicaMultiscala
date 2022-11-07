@@ -1,0 +1,50 @@
+workflow:
+  rules:
+    - if: $CI_COMMIT_BRANCH
+    - if: '$CI_PIPELINE_SOURCE == "schedule"'
+
+stages:
+  - build
+  - deploy
+
+binder_build:
+  # Use the base image automatically built by GitLab CI from
+  # https://gitlab.com/gromacs/online-tutorials/binder-builder repository.
+  image: registry.gitlab.com/gromacs/online-tutorials/binder-builder
+  services:
+    # Published by the parent of the above image
+    - docker:20-dind
+  stage: build
+  variables:
+    IMAGE_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
+    LATEST_TAG: $CI_REGISTRY_IMAGE:latest
+  script:
+    # Ensure repo2docker can re-use old image layers where available
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker pull $LATEST_TAG > /dev/null && echo "Pulled latest production image" || echo "No production image to pull"
+    - docker pull $IMAGE_TAG > /dev/null && echo "Pulled image from this branch" || echo "No old image from this branch to pull"
+    # Build the new binder image, using layers from the old image(s)
+    - jupyter-repo2docker --user-id 1000 --user-name nbuser --no-run --cache-from $IMAGE_TAG --image-name $IMAGE_TAG .
+    # Ensure the docker login has not timed out during the build
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    # Push the binder image to the registry so it can be re-used
+    - docker push $IMAGE_TAG
+
+publish:
+  # Use the base image automatically built by GitLab CI from
+  # https://gitlab.com/gromacs/online-tutorials/binder-builder repository.
+  image: registry.gitlab.com/gromacs/online-tutorials/binder-builder
+  services:
+    # Published by the parent of the above image
+    - docker:20-dind
+  stage: deploy
+  only:
+    - main
+  variables:
+    IMAGE_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
+    LATEST_TAG: $CI_REGISTRY_IMAGE:latest
+  script:
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+    - docker pull $IMAGE_TAG
+    - docker tag $IMAGE_TAG $LATEST_TAG
+    - docker push $LATEST_TAG

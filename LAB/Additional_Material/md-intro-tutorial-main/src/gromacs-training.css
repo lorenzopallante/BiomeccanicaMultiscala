@@ -1,0 +1,232 @@
+<style>
+.solarized.base03 { color: #002b36; }
+.solarized.base02 { color: #073642; }
+.solarized.base01 { color: #586e75; }
+.solarized.base00 { color: #657b83; }
+.solarized.base0 { color: #839496; }
+.solarized.base1 { color: #93a1a1; }
+.solarized.base2 { color: #eee8d5; }
+.solarized.base3  { color: #fdf6e3; }
+.solarized.solar-yellow  { color: #b58900; }
+.solarized.solar-orange  { color: #cb4b16; }
+.solarized.solar-red { color: #dc322f; }
+.solarized.solar-magenta { color: #d33682; }
+.solarized.solar-violet  { color: #6c71c4; }
+.solarized.solar-blue { color: #268bd2; }
+.solarized.solar-cyan { color: #2aa198; }
+.solarized.solar-green { color: #859900; }
+
+.ansiyellow { color: #b58900; }
+.ansiorange { color: #cb4b16; }
+.ansired { color: #dc322f; }
+.ansimagenta { color: #d33682; }
+.ansiviolet { color: #6c71c4; }
+.ansiblue { color: #268bd2; }
+.ansicyan { color: #2aa198; }
+.ansigreen { color: #859900; }
+
+.gromacs.blue {color: #3e3e7f}
+/* Notebook styling */
+
+body, p, div.rendered_html { 
+    color: #3e3e7f;
+/*    font-family: 'PT Serif', Georgia, Times, 'Times New Roman', serif; */
+    font-size: 12pt;
+}
+
+body { background-color: #eee8d5 !important; }
+
+#notebook { 
+    background-color: #d0d0ff !important;
+    box-shadow: inset 20px 36px 20px -35px black !important;
+}
+
+/*
+#maintoolbar { padding-top: 1em; padding-bottom: 1em; }
+#header { border-color: #93a1a1 !important; }
+*/
+/* Pager */
+
+#pager_splitter { background: none !important; }
+#pager {
+    background-color: #eee8d5;
+}
+div#pager pre {
+    background-color: #fdf6e3;
+    color: #586e75;
+}    
+
+/* Forms and menus */
+/*
+.navbar-default, .navbar-static-top {
+    background-color: #fdf6e3 !important;
+    color: #586e75 !important;
+}
+.navbar-default { border: none !important; }
+.navbar-nav > li > a { color: #586e75 !important; }
+.navbar-nav > li.open > a { background-color: #eee8d5 !important; color: #93a1a1 !important; }
+.nav > li.active > a { background-color: #eee8d5 !important; color: #586e75 !important; }
+
+.dropdown-menu { background-color: #fdf6e3 !important; border: none !important; }
+.dropdown-menu > li > a { color: #586e75 !important; }
+.dropdown-menu > li > a:hover { background-color: #eee8d5 !important; }
+.dropdown-menu > li.disabled > a { color: #93a1a1 !important; }
+
+button, .btn-default, .form-control, select {
+    background-color: #fdf6e3 !important;
+    color: #586e75 !important;
+}
+*/
+/* Tooltips */
+
+.completions {
+    border: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0;
+    margin-top: 0.5em;
+}
+.completions select { font-size: 11pt; }
+
+.ipython_tooltip .tooltiptext pre { 
+    font-size: 10pt;
+    background-color: #eee8d5;
+    color: #586e75;
+}
+.ipython_tooltip {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: #eee8d5;
+    color: #586e75;
+}
+.pretooltiparrow:before {
+    background-color: #eee8d5;
+}
+
+/* Cell output */
+
+.rendered_html pre, .rendered_html code {
+    color: inherit !important;
+    background-color: inherit !important;
+}
+div.output_area pre {
+    color: #93a1a1 !important;
+}
+.rendered_html table, .rendered_html td, .rendered_html th {
+    border: 1px solid #586e75 !important;
+}
+
+/* Modal dialogs */
+
+.modal-content, .modal-content p {
+    background-color: #eee8d5 !important;
+    color: #586e75 !important;
+}
+
+/* Cell styling */
+
+div.cell.selected { border-color: #839496 !important; }
+div.cell.edit_mode { border-color: #268bd2 !important; }
+div.input_prompt { color: #268bd2 !important; }
+div.output_prompt { color: #dc322f !important; }
+div.input_area { border: none !important; background: none !important; }
+
+.celltoolbar {
+    background: #eee8d5 !important;
+    color: #586e75 !important;
+}
+
+/*    border: 1px solid #002b36 !important;*/
+/* CodeMirror Styling */
+/*
+.cm-s-ipython {
+    line-height: 1.45em;
+    color-profile: sRGB;
+    rendering-intent: auto;
+    background-color: #002b36;
+    color: #93a1a1;
+    text-shadow: none;
+    border-radius: 4px;
+}
+*/
+/* Cursor */
+
+.cm-s-ipython div.CodeMirror-cursor {
+    border: none;
+    width: 0.6em;
+    background-color: rgba(100, 100, 100, 0.5);
+}
+
+/* Gutters */
+
+/*
+.cm-s-ipython .CodeMirror-gutters {
+  border-right: 1px solid;
+}
+
+.cm-s-ipython .CodeMirror-gutters {
+  background-color:  #002b36;
+  border-color: #00232c;
+}
+
+.cm-s-ipython .CodeMirror-linenumber {
+  text-shadow: #021014 0 -1px;
+  padding: 0 8px 0 0;
+  color: #586e75;
+}
+*/
+/*
+.cm-s-ipython .CodeMirror-guttermarker-subtle { color: #586e75; }
+.cm-s-ipython .CodeMirror-guttermarker { color: #ddd; }
+*/
+/* Syntax highlighting */
+/*
+.cm-s-ipython span.cm-keyword { color: #cb4b16 }
+.cm-s-ipython span.cm-atom { color: #d33682; }
+.cm-s-ipython span.cm-number { color: #d33682; }
+.cm-s-ipython span.cm-def { color: #268bd2; font-weight: bold; }
+
+.cm-s-ipython span.cm-variable { color: #93a1a1; }
+.cm-s-ipython span.cm-variable-2 { color: #b58900; }
+.cm-s-ipython span.cm-variable-3 { color: #6c71c4; }
+
+.cm-s-ipython span.cm-property { color: #2aa198; }
+.cm-s-ipython span.cm-operator {color: #6c71c4;}
+
+.cm-s-ipython span.cm-comment { color: #6c71c4; font-style: italic; }
+
+.cm-s-ipython span.cm-string { color: #2aa198; }
+.cm-s-ipython span.cm-string-2 { color: #b58900; }
+
+.cm-s-ipython span.cm-meta { color: #859900; }
+.cm-s-ipython span.cm-qualifier { color: #b58900; }
+.cm-s-ipython span.cm-builtin { color: #859900; }
+.cm-s-ipython span.cm-bracket { color: #cb4b16; }
+.cm-s-ipython .CodeMirror-matchingbracket { color: #b58900 !important; font-weight: bold; }
+.cm-s-ipython .CodeMirror-nonmatchingbracket { color: #dc322f; }
+.cm-s-ipython span.cm-tag { color: #93a1a1 }
+.cm-s-ipython span.cm-attribute {  color: #2aa198; }
+.cm-s-ipython span.cm-header { color: #586e75; }
+.cm-s-ipython span.cm-quote { color: #93a1a1; }
+.cm-s-ipython span.cm-hr {
+  color: transparent;
+  border-top: 1px solid #080e05;
+  display: block;
+}
+.cm-s-ipython span.cm-link { color: #93a1a1; cursor: pointer; }
+.cm-s-ipython span.cm-special { color: #6c71c4; }
+.cm-s-ipython span.cm-em {
+  color: #999;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+.cm-s-ipython span.cm-strong { color: #eee; }
+.cm-s-ipython span.cm-error,
+.cm-s-ipython span.cm-invalidchar {
+  color: #586e75;
+  border-bottom: 1px dotted #dc322f;
+}
+*/
+</style>
