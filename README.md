@@ -24,7 +24,7 @@ LAB 2  | Exercises on probability  |   [![Probability](https://colab.research.go
 LAB 3  | Intro Linux&Bash       	|   	[![LinuxBash](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/03-Intro_BashLinux/03-Intro_LinuxBash.ipynb)|
 LAB 4  | Bash Scripting          	|   	[![BashScripting](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/04-BashScripting/04-BashScripting.ipynb)|
 LAB 5  | Visualisation Tools          	|   	[![Visualization](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/05-VisualizationAnalysis/05-VisualizationAnalysis.ipynb)|
-LAB 6  | GROMACS 1          	|   [![Gromacs](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/06-Gromacs/06-Gromacs.ipynb)|	|
+LAB 6  | GROMACS 1 (make_ndx, editconf, pdb2gmx)         	|   [![Gromacs](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lorenzopallante/BiomeccanicaMultiscala/blob/main/LAB/06-Gromacs/06-Gromacs.ipynb)|	|
 LAB 7  | GROMACS 2          	|   	|
 LAB 8  | GROMACS 3         	|   	|
 LAB 9  | GROMACS 4         	|   	|
