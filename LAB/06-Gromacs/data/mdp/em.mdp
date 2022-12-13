@@ -1,0 +1,44 @@
+include                  = 
+define                   =
+integrator               = steep
+dt                       = 0.001
+nsteps                   = 1000
+init_step                = 0
+simulation_part          = 1
+comm-mode                = Linear
+nstcomm                  = 1
+comm-grps                = system
+
+emtol                    = 1000
+emstep                   = 0.01
+niter                    = 20
+fcstep                   = 0
+nstcgsteep               = 1000
+nbfgscorr                = 10
+
+nstxout                  = 10
+nstvout                  = 0
+nstfout                  = 0
+nstlog                   = 10
+nstcalcenergy            = 10
+nstenergy                = 10
+nstxtcout                = 10
+
+cutoff-scheme            = Verlet
+nstlist                  = 20
+ns-type                  = Grid
+pbc                      = xyz
+rlist                    = 1.0
+coulombtype              = pme
+coulomb-modifier         = Potential-shift-Verlet
+rcoulomb-switch          = 1.0
+rcoulomb                 = 1.0
+vdw-type                 = cut-off
+vdw-modifier             = Potential-shift-Verlet
+rvdw-switch              = 1.0
+rvdw                     = 1.0
+
+
+constraints              = none
+constraint-algorithm     = Lincs
+
