@@ -59,7 +59,7 @@ conda install -c conda-forge rise
 ### 3. Install Additional Required Libraries
 
 ```bash
-conda install matplotlib numpy seaborn scipy
+conda install matplotlib numpy seaborn scipy nglview
 ```
 
 
