@@ -2,7 +2,7 @@ include                  =
 define                   = 
 integrator               = md
 dt                       = 0.002
-nsteps                   = 10000
+nsteps                   = 25000
 init_step                = 0
 simulation_part          = 1
 comm-mode                = Linear
@@ -56,6 +56,6 @@ gen-vel                  = no
 gen-temp                 = 300
 gen-seed                 = 173529
 
-constraints              = all-bonds
+constraints              = h-bonds
 constraint-algorithm     = Lincs
 
