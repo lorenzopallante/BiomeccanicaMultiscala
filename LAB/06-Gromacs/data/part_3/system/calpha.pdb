@@ -1,0 +1,22 @@
+TITLE     Penetratin-Silica Umbrella simulation in water
+REMARK    THIS IS A SIMULATION BOX
+CRYST1   65.000   65.000   70.000  90.00  90.00  90.00 P 1           1
+MODEL        1
+ATOM      5  CA  ARG B  43      27.420  38.520  57.570  1.00  0.00           C
+ATOM     29  CA  GLN B  44      26.460  41.190  54.900  1.00  0.00           C
+ATOM     46  CA  ILE B  45      29.970  42.630  54.760  1.00  0.00           C
+ATOM     65  CA  LYS B  46      31.690  39.370  55.500  1.00  0.00           C
+ATOM     87  CA  ILE B  47      31.080  37.240  52.290  1.00  0.00           C
+ATOM    106  CA  TRP B  48      34.350  37.950  50.640  1.00  0.00           C
+ATOM    130  CA  PHE B  49      36.230  36.750  53.710  1.00  0.00           C
+ATOM    150  CA  GLN B  50      34.280  33.480  54.220  1.00  0.00           C
+ATOM    167  CA  ASN B  51      34.440  32.350  50.560  1.00  0.00           C
+ATOM    181  CA  ARG B  52      38.320  32.940  50.540  1.00  0.00           C
+ATOM    205  CA  ARG B  53      38.750  30.690  53.670  1.00  0.00           C
+ATOM    229  CA  MET B  54      36.490  28.070  52.030  1.00  0.00           C
+ATOM    246  CA  LYS B  55      38.620  28.110  48.720  1.00  0.00           C
+ATOM    268  CA  TRP B  56      41.790  27.470  50.920  1.00  0.00           C
+ATOM    292  CA  LYS B  57      40.510  24.920  53.530  1.00  0.00           C
+ATOM    314  CA  LYS B  58      37.370  22.870  54.440  1.00  0.00           C
+TER
+ENDMDL
