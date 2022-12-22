@@ -1,0 +1,61 @@
+include                  = 
+define                   = -DPOSRES
+integrator               = md
+dt                       = 0.001
+nsteps                   = 20000
+init_step                = 0
+simulation_part          = 1
+comm-mode                = Linear
+nstcomm                  = 1
+comm-grps                = system
+
+emtol                    = 10
+emstep                   = 0.01
+niter                    = 20
+fcstep                   = 0
+nstcgsteep               = 1000
+nbfgscorr                = 10
+
+nstxout                  = 0
+nstvout                  = 0
+nstfout                  = 0
+nstlog                   = 100
+nstcalcenergy            = 10
+nstenergy                = 10
+nstxtcout                = 100
+
+cutoff-scheme            = Verlet
+nstlist                  = 20
+ns-type                  = Grid
+pbc                      = xyz
+rlist                    = 1.0
+coulombtype              = pme
+coulomb-modifier         = Potential-shift-Verlet
+rcoulomb-switch          = 1.0
+rcoulomb                 = 1.0
+vdw-type                 = cut-off
+vdw-modifier             = Potential-shift-Verlet
+rvdw-switch              = 1.0
+rvdw                     = 1.0
+
+tcoupl                   = v-rescale
+nh-chain-length          = 10
+tc-grps                  = non-Water Water 
+tau-t                    = 0.1 0.1
+ref-t                    = 300 300
+
+Pcoupl                   = berendsen
+Pcoupltype               = isotropic
+nstpcouple               = -1
+tau_p                    = 1.0
+compressibility          = 4.5e-5
+ref_p                    = 1.0
+refcoord_scaling         = com
+
+gen-vel                  = yes
+gen-temp                 = 300
+gen-seed                 = 173529
+
+constraints              = all-bonds
+constraint-algorithm     = Lincs
+
