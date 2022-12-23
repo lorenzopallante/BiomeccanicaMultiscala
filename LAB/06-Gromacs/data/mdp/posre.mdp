@@ -1,12 +1,12 @@
 include                  = 
-define                   = -DPOSRES
-integrator               = md
-dt                       = 0.001
-nsteps                   = 20000
-init_step                = 0
-simulation_part          = 1
-comm-mode                = Linear
-nstcomm                  = 1
+define                   = -DPOSRES  ;Include the position restraint file
+integrator               = md	;Select the leap-frog algorithm to integrate the equation of motion
+dt                       = 0.001  ;Step to integrate the equation of motion
+nsteps                   = 20000  ;Maximum number of steps to integrate or minimize, -1 is no maximum
+init_step                = 0 
+simulation_part          = 1 
+comm-mode                = Linear ; Remove center of mass translational velocity 
+nstcomm                  = 1 
 comm-grps                = system
 
 emtol                    = 10
@@ -38,11 +38,13 @@ vdw-modifier             = Potential-shift-Verlet
 rvdw-switch              = 1.0
 rvdw                     = 1.0
 
-tcoupl                   = v-rescale
+;; Temperature coupling
+tcoupl                   = v-rescale 
 nh-chain-length          = 10
-tc-grps                  = non-Water Water 
+tc-grps                  = non-Water Water ;Two groups for temperature coupling to avoid the Hot Solvent, Cold protein problem 
 tau-t                    = 0.1 0.1
 ref-t                    = 300 300
+
 
 Pcoupl                   = berendsen
 Pcoupltype               = isotropic
